@@ -26,8 +26,10 @@ class ProfileViewController: UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+        loginNavController.modalPresentationStyle = .fullScreen
         
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setRootViewController(loginNavController)
+        self.present(loginNavController, animated: true, completion: nil)
+//        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.setRootViewController(loginNavController)
     }
     
     /*

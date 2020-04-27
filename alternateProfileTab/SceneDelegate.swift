@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
+        /*
         if let _ = Defaults.username {
             let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
             window?.rootViewController = mainTabBarController
@@ -28,6 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
             window?.rootViewController = loginNavController
         }
+         */
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
