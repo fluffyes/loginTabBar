@@ -58,20 +58,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-    func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
-        guard animated, let window = self.window else {
-            self.window?.rootViewController = vc
-            self.window?.makeKeyAndVisible()
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {
             return
         }
 
         window.rootViewController = vc
-        window.makeKeyAndVisible()
+//        window.makeKeyAndVisible()
+        
+        // add animation
         UIView.transition(with: window,
                           duration: 0.5,
-                          options: .transitionFlipFromLeft,
+                          options: [.transitionFlipFromLeft],
                           animations: nil,
                           completion: nil)
+        
     }
 }
 

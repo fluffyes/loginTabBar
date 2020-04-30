@@ -12,7 +12,8 @@ class Defaults {
  
    class var username : String? {
        get {
-          // #function means the function name, or in this case, the variable name, which is "username"
+          // #function means the function name, or in this case, the variable name,
+          // which is "username"
           return UserDefaults.standard.string(forKey: #function)
       }
       set {
